@@ -1,6 +1,6 @@
 # Cognitive Continuity Engineering (CCE)
 
-> **CCE is the engineering discipline devoted to making cognition persist, evolve, and remain reconstructable over time.**
+> **Cognitive Continuity Engineering is the engineering discipline of maintaining the identity, accessibility, and evolution of a cognitive entity through time under bounded resources and irreversible uncertainty.**
 
 ---
 
@@ -36,6 +36,46 @@ The distinction is fundamental:
 In networking, the objective is not to optimize caching — it is to maintain **connectivity**. In control engineering, the objective is not to perfect feedback loops — it is to maintain **stability**. Similarly, CCE's objective is not to maximize memory fidelity — it is to maintain **cognitive continuity**: the property that a cognitive system can persist, evolve, and remain reconstructable over time.
 
 This framing has a crucial consequence: CCE studies **continuity as an engineerable property of cognitive systems** — not Session, Memory, Skill, or Agent as specific mechanisms. Those mechanisms are implementation details of continuity, not the object of study itself.
+
+### 1.3 Theoretical Domain Boundaries
+
+CCE does not claim to answer every question about cognition. An essential theoretical move is drawing clear boundaries between domains:
+
+| Question | Domain |
+|----------|--------|
+| How should thought be expressed? | **EAP** (Explicit Abstraction Principle) |
+| How should knowledge be organized? | **EAP** |
+| How should cognition persist across time? | **CCE** |
+| How should tools and systems be implemented? | **Serenity** (or any concrete engineering platform) |
+| How should local task efficiency be improved? | **Engineering** (traditional domain-specific optimization) |
+| Does consciousness exist? Is an AI alive? | **Philosophy / Science** — explicitly outside CCE's scope |
+
+This domain cutting is not merely taxonomic — it is **theoretical hygiene**. By declaring what CCE does *not* study, the theory avoids:
+
+- **Scope creep**: CCE does not need to solve consciousness to be valid
+- **Vagueness by inclusion**: CCE is not a "theory of everything cognitive"
+- **Premature integration**: CCE and EAP are complementary neighbors, not hierarchical layers — each has its own object of study
+
+The relationship between these domains can be visualized as adjacent governing concerns over a shared cognitive entity:
+
+```mermaid
+flowchart TB
+    CE[Cognitive Entity<br/>identity · boundary · history]
+    CE --> EAP[EAP: artifact quality<br/>within each cycle]
+    CE --> CCE[CCE: continuity<br/>across cycles]
+    CE --> ENG[Engineering: implementation<br/>tools · systems · efficiency]
+    EAP -->|feeds structured artifacts into| CCE
+    CCE -->|defines temporal constraints for| EAP
+    CCE -->|specifies requirements for| ENG
+    ENG -->|provides substrate for| CCE
+    
+    style CE fill:#1A237E,color:#fff
+    style EAP fill:#E3F2FD,stroke:#1A237E
+    style CCE fill:#F1F8E9,stroke:#43A047
+    style ENG fill:#FFF3E0,stroke:#FF6D00
+```
+
+The key insight: **CCE studies the continuity of a cognitive entity — not the quality of its individual artifacts (EAP's domain), not the implementation of its tools (Engineering's domain), and certainly not the nature of its consciousness (Philosophy's domain).**
 
 ---
 
@@ -76,6 +116,33 @@ Formally, for a cognitive container C over time t₀, t₁, ..., tₙ:
 This means: the current state of the container is not determined by the most recent interaction alone. It is determined by the **entire history** of cognitive deltas applied to the container since its inception. Every interaction modifies the future state of the system — whether intended or not.
 
 **Example.** When an agent makes a design decision within a CCC and records it in a session document, that decision becomes part of C(t). All future agents interacting with the container encounter this decision as part of the container's state. If the decision was poorly documented (low explicitness), future agents will either misinterpret it (divergent trajectory) or spend additional cognitive resources reconstructing the original reasoning (increased reconstruction cost). The trajectory is shaped by every decision, good or bad, explicit or implicit.
+
+### 2.3 Cognitive Identity Boundary
+
+> **Cognitive Identity Boundary**
+> *The boundary that defines "which continuous entity is evolving." CCE's subject is not a biological agent — it is any cognitive entity with a persistent identity boundary across time.*
+
+CCE does not need to answer the philosophical question "who is thinking?" That belongs to the philosophy of mind. What CCE needs to answer is a narrower, engineering question: **"which continuous entity is evolving?"**
+
+A Cognitive Identity Boundary is what makes something count as *one thing* over time:
+
+| Entity | Identity Boundary | CCE Object |
+|--------|-------------------|------------|
+| **Human** | Biological continuity + autobiographical memory | A life trajectory |
+| **Project** | Shared goals, artifacts, and institutional memory | A project trajectory |
+| **Nation** | Legal continuity, cultural memory, historical narrative | A civilizational trajectory |
+| **Narrative** | Internal coherence of story elements across tellings | A narrative trajectory |
+| **CCC** | Root directory, tool set, session history | A container trajectory |
+
+The abstraction is elegant in its generality: **CCE's "subject" is not a living subject — it is a cognitive entity with a continuous boundary.** The word "a" — *a* company, *a* civilization, *a* story — is doing critical work. Language does not merely *describe* boundaries; language *participates in creating* them. When we say "a project," we are not just labeling a pre-existing category — we are constituting the boundary that makes continuity engineering possible.
+
+This connects directly to EAP's analysis of language as interface (§3 of the EAP theory). Language constructs the cognitive boundaries that CCE then engineers for continuity. The two theories share a common foundation in recognizing that linguistic structures are not passive descriptions but active boundary-forming operations.
+
+**Engineering consequence.** A Cognitive Identity Boundary must be:
+
+1. **Stable enough** to serve as a persistent referent — if the boundary shifts unpredictably, continuity is undermined at the substrate level
+2. **Permeable enough** to admit new information, agents, and reorganization — an impermeable boundary prevents evolution
+3. **Explicitly encoded** — an implicit boundary (e.g., "we all just know what this project is") cannot be engineered; it must be externalized as a defined structure
 
 ---
 
@@ -125,17 +192,41 @@ In thermodynamics, closed systems trend toward disorder. In cognitive systems, t
 
 **Example.** A family knowledge base contains a document about the home network topology written in January, a second document about the network written in March after a router upgrade, and a third written in June after adding a new VLAN. The first two documents are now partially obsolete, and no single document represents the current state. This is not a failure — it is entropy accumulation, and it requires ongoing organization, not a one-time fix.
 
+#### 3.3.1 Operational Cognitive Entropy
+
+A critical distinction: CCE does not measure **Total Cognitive Entropy** — the absolute information-theoretic disorder of the entire container. That quantity is neither observable nor actionable. Wikipedia has enormous total entropy, but that tells us nothing about whether it is a healthy cognitive container.
+
+Instead, CCE cares about **Operational Cognitive Entropy**:
+
+> **Operational Cognitive Entropy**
+> *The effective cognitive cost required for an agent to achieve a task objective within the container. It measures not "how much disorder exists" but "how much disorder obstructs action."*
+
+Engineering does not measure inoperable variables. A bridge engineer does not measure the total atomic vibration of the bridge — she measures stress at load points. Similarly, CCE measures entropy only where it affects **task completion cost**:
+
+| Concept | Definition | Engineering relevance |
+|---------|-----------|----------------------|
+| **Total Cognitive Entropy** | Absolute disorder across all stored information | Not measurable; not actionable |
+| **Operational Cognitive Entropy** | Increased cognitive cost to complete tasks due to disorder | Measurable via agent performance; directly actionable |
+
+The health of a cognitive container is not measured by how much information it contains, but by whether agents can still complete tasks within reasonable cost. A well-maintained engineering project with fifty documents may be a far healthier container than Wikipedia — because its operational entropy is low: agents find what they need quickly, abstractions are coherent, and reconstruction costs are bounded.
+
+This reframing gives CCE a concrete evaluation criterion:
+
+> **Accessibility maintenance** — the container is healthy when operational cognitive entropy remains below the threshold at which agents can no longer function effectively.
+
+CCE does not pursue omniscience. It pursues **reachability**.
+
 **Formal expression:**
 
-> **H(C(tₙ₊₁)) = H(C(tₙ)) + ΔH_in − ΔH_org**
+> **H_op(C, t) = cost(task | C, t) − cost(task | ideal)**
 >
-> Where H is the entropy of the container, ΔH_in is the entropy introduced by new cognitive deltas (every new piece of information adds some disorder), and ΔH_org is the entropy reduced through active organization.
+> Operational entropy H_op at time t is the excess cognitive cost to complete a task in container C compared to an idealized container with zero disorder. H_op is what we measure and manage. Total entropy H_total is a theoretical construct with no engineering utility.
 
-The objective of CCE is not to eliminate entropy — that is thermodynamically impossible. The objective is to ensure:
+The objective of CCE is not to eliminate entropy — that is thermodynamically impossible. The objective is to maintain:
 
-> **ΔH_org ≥ ΔH_in** — organization keeps pace with accumulation.
+> **H_op(C, t) ≤ H_critical** — operational entropy remains below the threshold where task completion becomes infeasible.
 
-When organization falls behind accumulation, the container's continuity degrades. When organization matches or exceeds accumulation, continuity is maintained.
+When organization keeps pace with accumulation, operational entropy is bounded and continuity is maintained. When organization falls behind, operational entropy grows, accessibility decays, and continuity degrades — even if all data is technically preserved.
 
 ---
 
@@ -154,6 +245,32 @@ Stored artifacts possess value only insofar as they enable future cognition to r
 > **V(artifact) ∝ R_quality(artifact)**
 >
 > Where V is the functional value of an artifact and R_quality is the degree to which it enables reconstruction of the original cognitive state. Preservation fidelity alone does not determine value.
+
+#### 3.4.1 Forgetting as Accessibility Decay
+
+A corollary of reconstruction-over-preservation: **forgetting is not deletion — it is the loss of practical accessibility.**
+
+Most memory systems model forgetting as a binary operation:
+
+> `Delete = Forget`
+
+This is both simplistic and misleading. In cognitive systems — biological or engineered — information is rarely *erased*. It becomes **practically inaccessible**: the information still exists somewhere in the container, but the cost of retrieving, interpreting, and relating it to current context exceeds what an agent is willing or able to pay.
+
+This can be formalized as **Cognitive Accessibility Decay**:
+
+> **A(artifact, t) = A₀ · e^(−λt)**
+>
+> Where A is the accessibility of an artifact at time t, A₀ is its initial accessibility (index quality, cross-reference density, explicitness), and λ is the decay rate determined by the container's organizational maintenance.
+
+The decay rate λ is the key engineering variable:
+
+| λ value | Condition | Outcome |
+|---------|-----------|---------|
+| λ ≈ 0 | Active organization maintained | Artifact remains accessible indefinitely |
+| λ > 0, small | Periodic organization | Artifact degrades slowly; still recoverable |
+| λ > 0, large | No organization | Artifact becomes practically inaccessible — functionally forgotten, though technically preserved |
+
+This model avoids the trap of equating deletion with forgetting. It also suggests that CCE's approach to memory is fundamentally about **managing accessibility decay rates** — not about deciding what to keep or delete, but about engineering the conditions under which stored cognition remains reachable.
 
 ---
 
@@ -272,8 +389,9 @@ flowchart LR
 |---|---|---|
 | **Core question** | How should knowledge be organized to maximize functional value? | How should organized knowledge continue to evolve without losing coherence? |
 | **Unit of analysis** | A cognitive artifact | A cognitive trajectory |
-| **Primary variable** | E (Explicitness Degree) | H (Entropy) |
+| **Primary variable** | E (Explicitness Degree) | H_op (Operational Cognitive Entropy) |
 | **Time orientation** | Static — optimal structure at a point in time | Dynamic — sustained coherence across time |
+| **Health metric** | E↑ R↓ S↑ (artifact quality) | Accessibility maintained below H_critical (container viability) |
 | **Relationship** | EAP governs abstraction | CCE governs continuity |
 
 EAP asks: *given a piece of knowledge, how should it be structured?* CCE asks: *given a structured knowledge base, how should it evolve over time without degrading?*
@@ -340,31 +458,41 @@ In other words: continuity holds if, given the state at an earlier point and the
 
 ### 6.2 Entropy Dynamics
 
-Define the entropy H of the container at time t as the degree of disorder in its cognitive state:
+Define **operational cognitive entropy** H_op as the excess cognitive cost imposed by container disorder on task completion:
 
-> **H(C, t) = −Σᵢ p(sᵢ) log p(sᵢ)**
+> **H_op(C, t) = cost(task | C, t) − cost(task | C_ideal)**
 >
-> Where p(sᵢ) is the probability that a random retrieval from the container returns state sᵢ. Higher entropy = less predictability = more disorder.
+> Where C_ideal is a hypothetical container with identical information content but zero disorder (perfect organization, full cross-referencing, no duplication). H_op measures the *actionable* disorder — the portion of entropy that actually obstructs cognition.
 
-When new information enters the container (accumulation), entropy increases:
+This definition deliberately excludes **Total Cognitive Entropy** H_total, which measures absolute disorder across the entire container. H_total is a theoretical construct — it cannot be measured (the full state of a complex container is not observable) and would not be actionable if it could be (knowledge of total disorder does not tell you where to organize). Engineering measures only operable variables.
 
-> **H(C, t + 1) = H(C, t) + ΔH_in(t) − ΔH_org(t)**
+When new information enters the container (accumulation), operational entropy changes:
+
+> **H_op(C, t + 1) = H_op(C, t) + ΔH_in(t) − ΔH_org(t)**
 >
 > Where:
-> - ΔH_in(t) ≥ 0: entropy introduced by new cognitive deltas (information, decisions, modifications)
-> - ΔH_org(t) ≥ 0: entropy reduced through active organization (deduplication, structuring, abstraction)
+> - ΔH_in(t) ≥ 0: operational entropy introduced by new cognitive deltas — new information that, if unorganized, increases task completion cost
+> - ΔH_org(t) ≥ 0: operational entropy reduced through active organization — structuring, deduplication, cross-referencing that lowers task completion cost
 
 **The Continuity Maintenance Condition:**
 
 > **ΔH_org(t) ≥ ΔH_in(t), ∀t**
 >
-> Organization must at minimum match accumulation for continuity to be sustained.
+> Organization must at minimum match accumulation for operational entropy to remain bounded.
 
-If ΔH_org < ΔH_in consistently, entropy grows without bound:
+If ΔH_org < ΔH_in consistently, operational entropy grows without bound:
 
-> **lim[t→∞] H(C, t) → ∞** when ΔH_org < ΔH_in
+> **lim[t→∞] H_op(C, t) → ∞** when ΔH_org < ΔH_in
 
-In this regime, the container becomes a "cognitive landfill" — information exists but cannot be effectively retrieved, related, or reconstructed. Continuity is lost, even if all data is technically preserved.
+In this regime, the container becomes a "cognitive landfill" — information exists but cannot be effectively retrieved, related, or reconstructed. Task completion costs rise until agents can no longer function. Continuity is lost not because information disappeared, but because it became **practically inaccessible** (§3.4.1).
+
+**The critical threshold:**
+
+> **Continuity is maintained ⟺ H_op(C, t) ≤ H_critical, ∀t**
+>
+> Where H_critical is the operational entropy level at which agents can no longer complete tasks within acceptable cost. H_critical is domain-specific: a software project with rapidly changing requirements has a lower H_critical (less tolerance for disorder) than a stable archival system.
+
+This model clarifies why "total information volume" is not a health metric for cognitive containers. A container can have vast information stores (high H_total) but low operational entropy (well-organized, highly accessible). Conversely, a container can have modest information but high operational entropy (fragmented, duplicated, incoherent). CCE evaluates the latter, not the former.
 
 ### 6.3 Reconstruction Fidelity
 
@@ -416,30 +544,59 @@ This does not mean all agents produce identical output — it means the containe
 
 ## 7. Engineering Objective
 
-### 7.1 What CCE Does Not Optimize
+### 7.1 What CCE Is Not
 
-To understand what CCE optimizes, it is clarifying to state what it does not:
+To understand what CCE optimizes, it is clarifying to state what it is not — and what objectives it explicitly rejects:
 
-| Not the objective | Why |
-|-------------------|-----|
-| **Maximize intelligence** | Intelligence is a property of agents, not containers. A container can maintain continuity with agents of varying intelligence. |
-| **Maximize memory** | Memory without structure is just storage. A container with perfect memory but no organization is a landfill, not a cognitive system. |
-| **Maximize control** | Control is a mechanism for preserving continuity, not an end in itself. Over-controlling impedes evolution. |
+| CCE is not | Why |
+|------------|-----|
+| **Capability engineering** | CCE does not aim to make cognition *stronger*. An 80-year-old is not necessarily more intelligent than a 20-year-old, but their cognitive continuity is richer. Value comes from accumulated experience, relationships, judgment, and history — not from benchmark scores. |
+| **Intelligence maximization** | Current AI discourse frequently frames memory as a path to intelligence increase: *memory → intelligence gain*. CCE reframes this: *memory → continuity preservation*. These are different directions. |
+| **Memory maximization** | Memory without structure is storage. A container with perfect memory but no organization is a landfill, not a cognitive system. |
+| **Control maximization** | Control is a mechanism for preserving continuity, not an end in itself. Over-controlling impedes evolution. |
+| **Terminal optimization** | CCE has no terminal KPI — no endpoint to maximize before. If there were a final objective, the framework would collapse into control theory: *maximize X before end*. CCE's objective is to maintain continuity *while alive*, not to optimize toward a final state. |
 
-### 7.2 The Actual Engineering Objective
+### 7.2 Persistence Engineering
 
-> **Maximize the long-term continuity of coherent cognition under bounded resources and irreversible information constraints.**
+The deepest reframing: **CCE does not optimize cognition. It preserves the conditions under which cognition can continue.**
+
+This distinguishes CCE from essentially all performance-oriented engineering disciplines:
+
+| Performance Engineering | Persistence Engineering (CCE) |
+|--------------------------|-------------------------------|
+| Optimize for speed, accuracy, throughput | Maintain identity, accessibility, evolutionary capacity |
+| Terminal objectives: maximize X | No terminal objective: maintain continuity while alive |
+| Improvement-oriented: get better | Sustenance-oriented: keep going |
+| Benchmarkable: measurable against a target | Evaluable: assessed by whether agents can still function |
+
+CCE is not capability engineering. It is **persistence engineering** — the engineering of continued existence under constraints. The goal is not to become greater. The goal is to remain.
+
+This aligns CCE with the logic of living systems. A living organism does not optimize toward a final KPI. Its "objective" — if we can call it that — is simply to continue existing, adapting, and maintaining its identity through time. CCE applies this same logic to cognitive entities: the measure of success is not peak performance but sustained coherent existence.
+
+### 7.3 The Engineering Objective
+
+> **Maintain the identity, accessibility, and evolutionary capacity of a cognitive entity through time under bounded resources and irreversible uncertainty.**
 
 Breaking this down:
 
-- **Long-term**: Not optimizing for the next interaction, but for the trajectory over indefinite time horizons
-- **Coherent**: Not just preserving information, but maintaining internal consistency
-- **Bounded resources**: Storage, computation, and attention are finite
-- **Irreversible information constraints**: Information theory sets hard limits that engineering cannot overcome, only operate within
+| Term | Meaning |
+|------|---------|
+| **Identity** | The entity remains recognizable as *the same thing* across time — its Cognitive Identity Boundary (§2.3) holds |
+| **Accessibility** | Agents can reach, interpret, and reconstruct the cognitive state within acceptable cost — Operational Cognitive Entropy (§3.3.1) is bounded below H_critical |
+| **Evolutionary capacity** | The entity can reorganize, abstract, and adapt — it is not frozen in a static preservation state |
+| **Bounded resources** | Storage, computation, and attention are finite — the entity cannot store everything, organize everything, or maintain everything |
+| **Irreversible uncertainty** | Information theory sets hard limits; the future is not fully predictable; some entropy is thermodynamically irreducible |
 
-### 7.3 Continuity as an Engineerable Property
+Key semantic change from the earlier framing: **maintenance** has replaced **preservation** as the governing verb.
 
-The central thesis of CCE — carrying forward the user's original insight — is:
+- **Preservation** implies freezing: keep exactly as is, resist change, archive.
+- **Maintenance** implies active, ongoing work: monitor, repair, reorganize, adapt.
+
+Continuity is not preserved — it is maintained. A preserved specimen is dead. A maintained entity is alive. The shift from *preservation* to *maintenance* is not rhetorical; it is a commitment to treating cognitive entities as dynamic, entropy-managing, evolving systems rather than static archives.
+
+### 7.4 Continuity as an Engineerable Property
+
+The central thesis of CCE is:
 
 > **Continuity is an engineerable property of cognitive systems, not a byproduct of specific mechanisms.**
 
@@ -450,17 +607,30 @@ Just as:
 
 CCE engineers **continuity** — not Session, Memory, Skill, or Agent. Those are implementation mechanisms. Continuity is the property they collectively produce, and it can be measured, degraded, restored, and optimized — just like any other engineering property.
 
-### 7.4 Open Research Questions
+The evaluation criterion is accessibility maintenance: **can agents still complete tasks within reasonable cost?** Not "how much information exists?" Not "how intelligent is each agent?" Not "how perfect is the organizational structure?" The only operational question is whether the container remains a viable environment for cognition.
+
+### 7.5 No Terminal State
+
+A consequence of CCE's persistence-engineering orientation: **there is no endpoint.**
+
+If there were a terminal state — a final goal to maximize — CCE would inevitably adopt the optimization framework of control theory: *maximize continuity before the end.* But continuity has no natural terminus except the cessation of the entity itself (its "death"). While the entity exists, the only objective is maintenance.
+
+This frees CCE from a trap that ensnares many cognitive frameworks: the assumption that there must be a measurable, optimizable KPI. CCE's "KPI" is binary and ongoing: **is the entity still maintainable?** If yes, continuity holds. If no, continuity has failed.
+
+This is not a weakness — it is a feature of studying persistence rather than performance. Living systems operate this way. A forest does not maximize biomass before winter. It maintains the conditions for continued existence. CCE applies the same structural logic to cognitive entities.
+
+### 7.6 Open Research Questions
 
 CCE, as a nascent discipline, identifies — but does not yet answer — the following questions:
 
-1. **Bounding**: How should cognitive spaces be bounded? What is the optimal granularity of a container?
-2. **Persistence**: How should cognition persist across time? What storage substrates and encoding schemes optimize for reconstructability?
-3. **Entropy measurement**: How should entropy be measured and managed? Can we define quantitative metrics for cognitive entropy akin to Shannon entropy?
-4. **Abstraction evolution**: How should abstractions evolve over time? When should an abstraction be retired vs. revised?
+1. **Bounding**: How should cognitive identity boundaries be constructed? What makes a boundary "well-formed" for continuity purposes?
+2. **Accessibility metrics**: How should operational cognitive entropy be measured in practice? Can we define quantitative accessibility metrics for real containers?
+3. **Decay management**: What organizational interventions most effectively reduce the accessibility decay rate λ? At what frequency must organization occur to maintain H_op below H_critical?
+4. **Abstraction evolution**: How should abstractions evolve over time? When should an abstraction be retired vs. revised vs. preserved as historical context?
 5. **Interruption recovery**: How should cognitive state be reconstructed after interruption? What is the minimum artifact set required for full state recovery?
-6. **Multi-agent continuity**: How should multiple cognitive agents maintain shared continuity? What protocols prevent agent-specific drift?
+6. **Multi-agent continuity**: How should multiple agents maintain shared continuity? What protocols prevent agent-specific drift from diverging the container's trajectory?
 7. **Adaptive coherence**: How should long-term cognition remain coherent while remaining adaptive? What is the optimal balance between stability and plasticity?
+8. **Identity persistence**: When does a cognitive entity cease to be "the same thing"? What degree of change is compatible with maintained identity, and at what point does continuity break?
 
 ---
 
@@ -469,7 +639,10 @@ CCE, as a nascent discipline, identifies — but does not yet answer — the fol
 1. Roth, E. M. (2008). Cognitive Engineering. In *Wiley Encyclopedia of Computer Science and Engineering*. https://doi.org/10.1002/0471028959.sof045
 2. Shannon, C. E. (1948). A Mathematical Theory of Communication. *Bell System Technical Journal*, 27(3), 379–423.
 3. [Explicit Abstraction Principle (EAP)](https://github.com/tellmewhattodo/theory-eap) — the complementary theory governing cognitive artifact quality within individual cycles.
+4. [The Continuity Layer](https://thecontinuitylayer.com) — an independent exploration of continuity as a required architectural layer for AI systems, arriving at related conclusions from the engineering side.
 
 ---
 
-> *CCE is the engineering discipline devoted to making cognition persist, evolve, and remain reconstructable over time.*
+> *CCE does not optimize cognition. It preserves the conditions under which cognition can continue.*
+>
+> *Cognitive Continuity Engineering is the persistence engineering of cognitive entities — maintaining identity, accessibility, and evolution through time.*
