@@ -69,10 +69,10 @@ flowchart TB
     CCE -->|specifies requirements for| ENG
     ENG -->|provides substrate for| CCE
     
-    style CE fill:#1A237E,color:#fff
-    style EAP fill:#E3F2FD,stroke:#1A237E
-    style CCE fill:#F1F8E9,stroke:#43A047
-    style ENG fill:#FFF3E0,stroke:#FF6D00
+    style CE fill:#3A5BA0,color:#fff,stroke:#2A4B90
+    style EAP fill:#E8F0FE,color:#3A5BA0,stroke:#5B9BD5
+    style CCE fill:#E6F4EA,color:#3C7A3E,stroke:#5FAD56
+    style ENG fill:#FFF4E5,color:#B87A00,stroke:#F0A560
 ```
 
 The key insight: **CCE studies the continuity of a cognitive entity — not the quality of its individual artifacts (EAP's domain), not the implementation of its tools (Engineering's domain), and certainly not the nature of its consciousness (Philosophy's domain).**
@@ -301,12 +301,12 @@ flowchart LR
     R --> Ev[6. Evolution]
     Ev --> E
     
-    style E fill:#1A237E,color:#fff
-    style A fill:#283593,color:#fff
-    style O fill:#3949AB,color:#fff
-    style Ab fill:#5C6BC0,color:#fff
-    style R fill:#7986CB,color:#fff
-    style Ev fill:#9FA8DA,color:#fff
+    style E fill:#E06C4F,color:#fff,stroke:#C55A33
+    style A fill:#F0A560,color:#fff,stroke:#D4893E
+    style O fill:#5FAD56,color:#fff,stroke:#3D8B3A
+    style Ab fill:#4D9CB3,color:#fff,stroke:#367A8F
+    style R fill:#6C7EC9,color:#fff,stroke:#4E5FA8
+    style Ev fill:#9B6DB5,color:#fff,stroke:#7B4E96
 ```
 
 The output of each cycle becomes part of the input of the next. Cognition is modeled as **recursive evolution** rather than repeated initialization.
@@ -337,10 +337,14 @@ flowchart TB
     Recon -->|Recovered Understanding| Evo[Evolution]
     Evo -->|Adapted Container| Accumulation
     
-    style Accumulation fill:#FFF3E0,stroke:#FF6D00
-    style Organization fill:#F1F8E9,stroke:#43A047
-    style Recon fill:#E3F2FD,stroke:#1A237E
-    style Evo fill:#F3E5F5,stroke:#7C4DFF
+    style Accumulation fill:#FFF4E5,stroke:#F0A560,color:#8B6914
+    style Organization fill:#E6F4EA,stroke:#5FAD56,color:#3C7A3E
+    style Recon fill:#E8F0FE,stroke:#5B9BD5,color:#3A5BA0
+    style Evo fill:#F3EAF7,stroke:#9B6DB5,color:#7B4E96
+    style Exp fill:#F0A560,color:#fff,stroke:#D4893E
+    style Acc fill:#E8D5B7,color:#6B4226,stroke:#D4A574
+    style Org fill:#5FAD56,color:#fff,stroke:#3D8B3A
+    style Abs fill:#C5E0C5,color:#3C7A3E,stroke:#81B29A
 ```
 
 - **Accumulation Phase** (Experience → Accumulation): ΔH_in increases. New information enters, bringing both signal and noise.
@@ -381,8 +385,14 @@ flowchart LR
     EAP -->|Governs artifact quality<br/>within each cycle| CCE
     CCE -->|Governs coherence<br/>across cycles| EAP
     
-    style EAP fill:#E3F2FD,stroke:#1A237E
-    style CCE fill:#F1F8E9,stroke:#43A047
+    style EAP fill:#E8F0FE,stroke:#5B9BD5,color:#3A5BA0
+    style CCE fill:#E6F4EA,stroke:#5FAD56,color:#3C7A3E
+    style E_var fill:#5B9BD5,color:#fff,stroke:#4A8AC4
+    style R_var fill:#7DB9DE,color:#fff,stroke:#5B9BD5
+    style S_var fill:#A8D0EA,color:#3A5BA0,stroke:#7DB9DE
+    style Cont fill:#5FAD56,color:#fff,stroke:#3D8B3A
+    style Ent fill:#81C27A,color:#fff,stroke:#5FAD56
+    style Evol fill:#B5DFAE,color:#3C7A3E,stroke:#81C27A
 ```
 
 | | EAP | CCE |
@@ -428,8 +438,13 @@ flowchart TB
     Ctrl -->|implementation details| P3[Memory Management]
     Ctrl -->|implementation details| P4[Behavioral Constraints]
     
-    style C fill:#43A047,color:#fff
-    style Ctrl fill:#FF9800,color:#fff
+    style C fill:#5FAD56,color:#fff,stroke:#3D8B3A
+    style S fill:#81C27A,color:#fff,stroke:#5FAD56
+    style Ctrl fill:#F0A560,color:#fff,stroke:#D4893E
+    style P1 fill:#FFF4E5,color:#8B6914,stroke:#F0A560
+    style P2 fill:#FFF4E5,color:#8B6914,stroke:#F0A560
+    style P3 fill:#FFF4E5,color:#8B6914,stroke:#F0A560
+    style P4 fill:#FFF4E5,color:#8B6914,stroke:#F0A560
 ```
 
 Local control naturally appears wherever continuity requires stability. Techniques such as prompting strategies, workflow orchestration, memory management, or behavioral constraints become implementation details of continuity rather than independent engineering goals.
